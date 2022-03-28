@@ -26,14 +26,12 @@ npm run watch
 
 ## Directory structure
 
-All files can belong to
+All files either belong to
 
 - scripts and styles which run in the Editor only,
 - scripts and styles which run in the Editor and on the final website
 
 ### Scripts and Styles for the Editor only
-
-This is
 
 - editor.js
 - index.js
