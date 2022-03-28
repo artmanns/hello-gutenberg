@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json.schemastore.org/block.json",
+  "apiVersion": 2,
+  "name": "artmanns/my-second-block",
+  "title": "Mein zweiter Block",
+  "category": "text",
+  "icon": {
+    "src": "admin-site"
+  },
+  "description": "Mein zweiter Block mit Gutenberg.",
+  "keywords": ["hello", "sample"],
+  "version": "1.0.0",
+  "textdomain": "artmanns",
+  "editorScript": "art-hello-gutenberg-editor-script",
+  "script": "art-hello-gutenberg-script",
+  "editorStyle": "art-hello-gutenberg-editor-style",
+  "style": "art-hello-gutenberg-style",
+  "attributes": {
+    "simpleText": {
+      "type": "number",
+      "default": "Hello Gutenberg"
+    }
+  }
+}
