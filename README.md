@@ -46,11 +46,11 @@ All files either belong to
 
 ## Package Versions
 
-WordPress moves forward quite fast. The included `package.json` was tested with WordPress 5.9.1. You can check all dependencies against the versions used by WordPress on [Branches WordPress Core](https://core.trac.wordpress.org/browser/branches?order=name)
+WordPress moves forward quite fast. The included `package.json` was tested with WordPress 5.9.1. You can check all dependencies against the versions used by WordPress on [Branches WordPress Core](https://core.trac.wordpress.org/browser/branches?order=name).
 
 ## Pragmas
 
-WordPress defines it's own `createElement`as well as `Fragment`. Therefore the `webpack.config.js`contains
+WordPress defines it's own `createElement` as well as it's own `Fragment`. Therefore the file `webpack.config.js` contains
 
 ```javascript
 "@babel/preset-react",
@@ -66,7 +66,7 @@ WordPress defines it's own `createElement`as well as `Fragment`. Therefore the `
 Gutenberg consists of many packages. All of them are loaded when WordPress is started.
 You shall not include those libraries into your bundles.
 
-If you want to use them within your favorite IDE e.g. for name completion as well as for linting, you have to include the as externals to your `webpack.config.js`
+If you want to use them within your favorite IDE e.g. for name completion as well as for linting, you have to include them as externals to your `webpack.config.js`
 
 Here an example for some of the libraries
 
@@ -116,7 +116,7 @@ function artmanns_register_my_first_block() {
 add_action('init', 'artmanns_register_my_first_block');
 ```
 
-`register_block_type()` takes all scripts and styles to be loaded from the file `block.json`:
+The file `block.json` defines all scripts and style that have to be loaded by `register_block_type()`.
 
 ```json
 {
@@ -145,7 +145,7 @@ add_action('init', 'artmanns_register_my_first_block');
 }
 ```
 
-Note that the values of `editorScript`, `script`, `editorStyle` and `style` have to be the same as previous defined within the `wp_register_script()` functions.
+Note that the values of `editorScript`, `script`, `editorStyle` and `style` have to be as previous defined within the `wp_register_script()` functions.
 
 ## Adding your own blocks
 
@@ -160,7 +160,7 @@ If you want to add your own block e.g. named `my-second-block` you have to perfo
 4. Within the directory `src` you have to
    - import the dirctory of your new block into `editor.js`, and
    - import the file `script.js` of your directory into `script.js`
-5. Move a directory level up into the plugin directory. Add the file `index.php`of your new block into `artmanns-hello-gutenberg.php`by means of `require_once`.
+5. Move a directory level up into the plugin directory. Add the file `index.php`of your new block into `artmanns-hello-gutenberg.php` by means of `require_once`.
 6. Run `npm run dev` as well as `npm run prod` to create the bundles.
 
 ## Create a ZIP-Archive of your Plugin
